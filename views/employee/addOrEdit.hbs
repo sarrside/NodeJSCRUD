@@ -1,0 +1,37 @@
+<h3> {{viewTitle}} </h3>
+
+<form action="/employes" method="POST" autocomplete="off">
+<input type="hidden" name="_id" value="{{employer._id}}">
+    <div class="form-group">
+        <label for="prenom">Prénom</label>
+        <input type="text" name="prenom" id="prenom" class="form-control" placeholder="votre prénom ici" value="{{employer.prenom}}">
+        <div class="text-danger">
+            {{employer.prenomError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="nom">Nom</label>
+        <input type="text" name="nom" id="nom" class="form-control" placeholder="votre nom ici" value="{{employer.nom}}">
+        <div class="text-danger">
+            {{employer.nomError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="votre mail ici" value="{{employer.email}}">
+        <div class="text-danger">
+            {{employer.emailError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="mobile">Mobile</label>
+        <input type="tel" name="mobile" id="mobile" class="form-control" placeholder="votre numéro de téléphone ici" value="{{employer.mobile}}">
+    </div>
+    <div class="form-group">
+        <label for="city">Ville</label>
+        <input type="text" name="city" id="city" class="form-control" placeholder="votre ville ici" value="{{employer.city}}">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"> <i class="fa fa-database"></i> Soumettre</button>
+    </div>
+</form>

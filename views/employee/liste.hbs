@@ -1,0 +1,29 @@
+<h3><a href="/employes" class="btn btn-secondary" ><i class="fa fa-plus"></i>Nouveau</a>Liste des employés</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>PRÉNOM</th>
+            <th>NOM</th>
+            <th>EMAIL</th>
+            <th>MOBILE</th>
+            <th>VILLE</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each liste}}
+        <tr>
+            <td>{{this.prenom}}</td>
+            <td>{{this.nom}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.mobile}}</td>
+            <td>{{this.city}}</td>
+            <td>
+                <a href="/employes/modifier/{{this._id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                <a href="/employes/suprimmer/{{this._id}}" onclick="return confirm('Voulez-vous vraiment le suprimmer')"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
